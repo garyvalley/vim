@@ -9,6 +9,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/VUndle.vim'
 Plugin 'vim-colors-solarized'
+Plugin 'vimwiki/vimwiki'
 
 " All plugins must be added before this line
 call vundle#end()
