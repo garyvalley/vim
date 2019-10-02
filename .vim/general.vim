@@ -14,9 +14,10 @@ set t_ut=			" disable the background color erase that messes with color schemes
 set completeopt-=preview	" command completiong options
 set encoding=utf-8
 scriptencoding utf-8
-set shiftwidth=4		" use indents of 4 spaces
+set shiftwidth=2		" use indents of 4 spaces
 set noexpandtab			" tabs are actually tabs
-set softtabstop=4		" backspace deletes indents
+set tabstop=2			" backspace deletes indents
+set softtabstop=2		" backspace deletes indents
 set undofile
 set undodir=~/.vim/undo
 set noswapfile
