@@ -1,3 +1,21 @@
+" global functions
+function! UseTabs() 
+  set tabstop=4           " Size of the hard tab stop 
+  set shiftwidth=4        " Size of indentation
+  set noexpandtab         " Always use tab characters instead of spaces
+  set autoindent          " Copy the indentation from the current line to the next
+endfunction
+
+function! UseSpaces()
+  set tabstop=2           " Size of a hard tabstop
+  set shiftwidth=2        " Size of an indentation
+  set expandtab           " Always expand tabs to be spaces of length defined above
+  set softtabstop=0       " Number of spaces a tab counts for when using backspace over indents
+  set autoindent          " Copy the indentation from the current line to the next
+  set smarttab            " Insert blanks on a <Tab> key 
+endfunction
+
+" =====================================================================================================================
 
 " global options
 set nocompatible	      	" use vim settings vs vi ... set first because it changes other settings
@@ -16,21 +34,5 @@ scriptencoding utf-8
 set undofile
 set undodir=~/.vim/undo
 set noswapfile
-:call UseSpaces()         
+call UseSpaces()         
 
-
-function! UseTabs() 
-  set tabstop=4           " Size of the hard tab stop 
-  set shiftwidth=4        " Size of indentation
-  set noexpandtab         " Always use tab characters instead of spaces
-  set autoindent          " Copy the indentation from the current line to the next
-endfunction
-
-function! UseSpaces()
-  set tabstop=2           " Size of a hard tabstop
-  set shiftwidth=2        " Size of an indentation
-  set expandtab           " Always expand tabs to be spaces of length defined above
-  set softtabstop=0       " Number of spaces a tab counts for when using backspace over indents
-  set autoindent          " Copy the indentation from the current line to the next
-  set smarttab            " Insert blanks on a <Tab> key 
-endfunction

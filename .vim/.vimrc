@@ -1,0 +1,1 @@
+/home/garyvalley/vim/.vimrc

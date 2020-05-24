@@ -1,17 +1,14 @@
-filetype off
 
-" set the runtime path to include Vundle and init
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+  \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" you could tell Vundle to put plugins elsewhere
-" call vundle#begin(<path>)
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
+:Plug 'morhetz/gruvbox'                             " colorscheme
+":Plug 'artur-shaik/vim-javacomplete2'               " java completion
 
 " All plugins must be added before this line
-call vundle#end()
-filetype plugin indent on
-
-syntax enable
-set background=dark
+call plug#end()
